@@ -1,8 +1,11 @@
 - name: configure "{{ component }}"
-  hosts: "{{ component }}"
+  # hosts: "{{ component }}" previously dynamic 
+  osts: localhost
+  connection: local
   become: yes
   roles:
   - "{{ component }}"
+
 
  #  after mongodb steps instead of old  steps ,continue this new one ,let me name as 7th steps created as main.yaml
  # instead of creating diff .yaml <ex:mongodb.yaml> for  all components one .main.yaml  
