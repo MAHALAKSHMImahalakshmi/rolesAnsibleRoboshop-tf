@@ -1,6 +1,6 @@
 - name: configure "{{ component }}"
   # hosts: "{{ component }}" previously dynamic -. where in inventory file --> mentioned the componet ip address dynamically created
-  osts: localhost # to run in terraform in loacl host 
+  hosts: localhost # to run in terraform in loacl host 
   connection: local
   become: yes
   roles:
