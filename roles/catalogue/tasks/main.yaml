@@ -27,7 +27,7 @@
     state: present
 
 - name: check products loaded or not
-  ansible.builtin.command: mongosh --host mongodb.srivenkata.shop --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+  ansible.builtin.command: mongosh --host {{ MONGODB_HOST }} --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
   ignore_errors: true
 #  Difference Between `command` and `shell` in Ansible:
@@ -47,7 +47,7 @@
     msg: "{{ catalogue_output }}"
   ignore_errors: true
 - name: load products
-  ansible.builtin.shell: mongosh --host mongodb.srivenkata.shop < /app/db/master-data.js
+  ansible.builtin.shell: mongosh --host {{ MONGODB_HOST }} < /app/db/master-data.js
   when: catalogue_output.stdout | int < 0
   ignore_errors: true
 # error faced here output stout -1 in string coverted int using pipeline 
