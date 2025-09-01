@@ -1,1 +1,1 @@
-MONGODB_HOST: mongodb.srivenkata.shop
+MONGODB_HOST: mongodb-{{ env }}.srivenkata.shop
