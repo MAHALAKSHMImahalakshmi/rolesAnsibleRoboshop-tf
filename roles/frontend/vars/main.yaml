@@ -1,5 +1,5 @@
-CATALOGUE_HOST: catalogue.srivenkata.shop
-USER_HOST: user.srivenkata.shop
-CART_HOST: cart.srivenkata.shop
-SHIPPING_HOST: shipping.srivenkata.shop
-PAYMENT_HOST : payment.srivenkata.shop
+CATALOGUE_HOST: catalogue.backend-{{ env }}.srivenkata.shop
+USER_HOST: user.backend-{{ env }}.srivenkata.shop
+CART_HOST: cart.backend-{{ env }}.srivenkata.shop
+SHIPPING_HOST: shipping.backend-{{ env }}.srivenkata.shop
+PAYMENT_HOST : payment.backend-{{ env }}.srivenkata.shop
