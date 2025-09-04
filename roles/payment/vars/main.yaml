@@ -1,5 +1,3 @@
 CART_HOST: cart.backend-{{ env }}.srivenkata.shop
 USER_HOST: user.backend-{{ env }}.srivenkata.shop
 RABBITMQ_HOST: rabbitmq-{{ env }}.srivenkata.shop
-RABBITMQ_USER: roboshop
-RABBITMQ_PASSWORD: roboshop123
