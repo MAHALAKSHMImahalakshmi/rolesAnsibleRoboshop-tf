@@ -15,10 +15,11 @@
     state: started
     enabled: yes
 
+
 - name: create rabbitmq user
   community.rabbitmq.rabbitmq_user:
-    user: {{ RABBITMQ_USER }}
-    password: {{ RABBITMQ_PASSWORD }}
+    user: roboshop
+    password: roboshop123
     permissions:
       - vhost: /
         configure_priv: .*
